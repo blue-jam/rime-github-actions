@@ -12,4 +12,6 @@ jobs:
       volumes:
         - .:/rime_project
     steps:
-      - run: ls -a
+      - run: |
+          pwd
+          ls -a /rime_project
