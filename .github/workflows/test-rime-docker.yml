@@ -1,0 +1,14 @@
+name: Run test with rime-docker
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  test:
+    container:
+      image: bluejamkmy/rime-docker:latest
+      volumes:
+        - .:/rime_project
+    steps:
+      - run: ls -a
