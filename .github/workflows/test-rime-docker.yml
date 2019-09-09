@@ -14,4 +14,4 @@ jobs:
     steps:
       - run: |
           pwd
-          ls -a /rime_project
+          ls -a
