@@ -6,6 +6,7 @@ on:
 
 jobs:
   test:
+    runs-on: ubuntu-latest
     container:
       image: bluejamkmy/rime-docker:latest
       volumes:
