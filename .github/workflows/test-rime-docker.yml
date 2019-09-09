@@ -12,6 +12,7 @@ jobs:
       volumes:
         - .:/rime_project
     steps:
+      - uses: actions/checkout@v1
       - run: |
           pwd
           ls -a
