@@ -9,11 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: bluejamkmy/rime-docker:latest
-      volumes:
-        - .:/rime_project
-      options: -it bash
     steps:
       - uses: actions/checkout@v1
-      - run: |
-          pwd
-          ls -a
+      - run: ls -a
+      - run: rime test
