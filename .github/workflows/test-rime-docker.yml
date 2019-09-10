@@ -11,5 +11,22 @@ jobs:
       image: bluejamkmy/rime-docker:latest
     steps:
       - uses: actions/checkout@v1
-      - run: ls -a
       - run: rime test
+  deploy-summary:
+    runs-on: ubuntu-latest
+    container:
+      image: bluejamkmy/rime-docker:latest
+    steps:
+      - name: Pull repository
+        uses: actions/checkout@v1
+      - name: Generate a summary HTML
+        run: |
+          rime htmlify_full -k
+          mkdir summary
+          mv summary.html summary
+      - name: Deploy github pages
+        uses: peaceiris/actions-gh-pages@v2.2.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./summary
