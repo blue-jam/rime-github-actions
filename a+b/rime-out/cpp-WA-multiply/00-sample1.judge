@@ -1,5 +1,0 @@
---- /home/junpei/Repository/rime-github-actions/a+b/rime-out/tests/00-sample1.diff	2019-09-09 22:45:43.844855377 +0900
-+++ /home/junpei/Repository/rime-github-actions/a+b/rime-out/cpp-WA-multiply/00-sample1.out	2019-09-09 22:45:45.921893378 +0900
-@@ -1 +1 @@
--7
-+12
