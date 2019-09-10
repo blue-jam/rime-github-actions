@@ -22,9 +22,8 @@ jobs:
       - name: Generate a summary HTML
         run: |
           rime htmlify_full -k
-          sed "s/http:\/\//https:\/\//" summary.html
           mkdir summary
-          mv summary.html summary/index.html
+          sed "s/http:\/\//https:\/\//" summary.html > summary/index.html
       - name: Deploy github pages
         uses: peaceiris/actions-gh-pages@v2.2.0
         env:
