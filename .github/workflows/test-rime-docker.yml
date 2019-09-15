@@ -23,6 +23,7 @@ jobs:
         run: |
           rime htmlify_full -k
           mkdir summary
+          mv summary.html summary/index.html
       - name: Deploy github pages
         uses: peaceiris/actions-gh-pages@v2.2.0
         env:
