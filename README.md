@@ -13,5 +13,6 @@ The jobs runs on `git push` on the `master` branch.
 
 ## Link
 
+- [rime](https://github.com/icpc-jag/rime)
 - [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) - used to publish GitHub pages. You have
 to generate & configure `ACTIONS_DEPLOY_KEY`.
